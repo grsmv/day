@@ -63,3 +63,4 @@ Table of possible phrase types to parse:
 
 TODO: 1. Add unit tests
       2. Pack as a gem with dependencies (Unicode gem).
+      3. Write documentation.
