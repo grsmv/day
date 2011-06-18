@@ -25,10 +25,13 @@ Table of possible phrase types to parse:
   в этот понедельник           |                                 |       +
   в этот вторник и т.д.        |                                 |       +
   пн (вт, ср, чт, пт, чб, вс)  |                                 |       +
+  в пн (во вт, в ср ...)       |                                 |
   в следующий понедельник      |                                 |       +
   в следующий вторник и т.д.   |                                 |       +
+  в след пн (в след.? вт)      |                                 |
   в прошлый понедельник        |                                 |       +
   в прошлый вторник и т.д.     |                                 |       +
+  в прошлый пн (вт, ср)        |                                 |
   ----------------------------------------------------------------------------------
   через неделю                 |                                 |       +
   через две недели и т.д.      |                                 |       +
@@ -40,6 +43,8 @@ Table of possible phrase types to parse:
   через месяц                  |                                 |       +
   через два месяца             |                                 |       +
   через 2 месяца               |                                 |       +
+  через мес                    |                                 |
+  через 2 мес                  |                                 |
   месяц назад                  |                                 |       +
   два месяца назад             |                                 |       +
   пять месяцев назад           |                                 |       +
@@ -61,6 +66,7 @@ Table of possible phrase types to parse:
   2011.5.1                     |                                 |       +
   2011.1                       |                                 |  error raised
 
-TODO: 1. Add unit tests
-      2. Pack as a gem with dependencies (Unicode gem).
-      3. Write documentation.
+TODO: - Move Unicode gem (unicode-0.4.0) in dependencies
+      - Write tests for sure in equality of numerical and literal days values 
+        and for sure in right date recognition
+      - Write YARD documentation
