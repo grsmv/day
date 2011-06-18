@@ -70,3 +70,4 @@ TODO: - Move Unicode gem (unicode-0.4.0) in dependencies
       - Write tests for sure in equality of numerical and literal days values 
         and for sure in right date recognition
       - Write YARD documentation
+
