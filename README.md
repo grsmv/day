@@ -66,8 +66,11 @@ Table of possible phrase types to parse:
     2011.5.1                     |                                 |       +
     2011.1                       |                                 |  error raised
 
-TODO: - Move Unicode gem (unicode-0.4.0) in dependencies
-      - Write tests for sure in equality of numerical and literal days values 
-        and for sure in right date recognition
-      - Write YARD documentation
+TODO:
+-----
+
+1. Move Unicode gem (unicode-0.4.0) in dependencies
+2. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
+3. Write YARD documentation
+4. Pack as gem
 
