@@ -103,31 +103,28 @@ module Day
     end
 
 
-    def next_month month_number
-      month = month_number.nil? ? 1 : month_number.to_i
-
-      if @now.mon + month > 12
-        mon = (@now.mon + month) % 12
-        year = @now.year + (@now.mon + month) / 12
-      else
-        mon, year = (@now.mon + month), @now.year
-      end
-
+    def month_proto num
+      month = num.nil? ? 1 : num.to_i
+      year, mon = yield(month)
       @date = Time.mktime(year, mon, @now.day)
     end
 
 
-    def previous_month month_number
-      month = month_number.nil? ? 1 : month_number.to_i
+    def next_month num
+      month_proto(num) { |month|
+        @now.mon + month > 12 ?
+          [(@now.year + (@now.mon + month) / 12), ((@now.mon + month) % 12)] : 
+          [@now.year, (@now.mon + month)]
+      }
+    end
 
-      if @now.mon - month < 1
-        mon = 12 - ((month - @now.mon) % 12)
-        year = @now.year - (@now.mon - month) / 12 * -1
-      else
-        mon, year = (@now.mon - month), @now.year
-      end
 
-      @date = Time.mktime(year, mon, @now.day)
+    def previous_month num
+      month_proto(num) { |month|
+        @now.mon - month < 1 ?
+          [(@now.year - (@now.mon - month) / 12 * -1), (12 - ((month - @now.mon) % 12))] :
+          [@now.year, (@now.mon - month)]
+      }
     end
 
     public
@@ -268,4 +265,4 @@ end
     #  2011-5-1
     #  2011.5.1
     #  2011.1 (!!!)
-p Day::Ru 'через 2 дня'
+p Day::Ru 'через 2 месяца'

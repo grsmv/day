@@ -73,4 +73,4 @@ TODO:
 2. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
 3. Write YARD documentation
 4. Pack as gem
-
+5. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Livenstein length).
