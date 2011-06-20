@@ -2,7 +2,7 @@ $KCODE = 'u'
 
 require 'date'
 require 'iconv'
-
+require 'yaml'
 
 class Numeric
   def days
@@ -14,28 +14,11 @@ module Day
 
   class Ru
 
-    @@short_week_days = %w(nil пн вт ср чт пт сб вс)
-    @@week_days = %w(nil понедельник вторник среду черверг пятницу субботу воскресенье)
-
-    @@days_in_month = [
-      31, (Date.new(Time.now.year, 1, 1).leap? ? 29 : 28), 31, 30, 31, 30, 
-      31, 31, 30, 31, 30, 31
-    ]
-
-    @@simple_numerics = {
-      'один'   => 1, 'одну'   => 1, 'два'    => 2,
-      'две'    => 2, 'три'    => 3, 'четыре' => 4,
-      'пять'   => 5, 'шесть'  => 6, 'семь'   => 7,
-      'восемь' => 8, 'девять' => 9, 'десять' => 10
-    }
-
-    @@month_vocabulary = {
-      'янв' => 'jan', 'фев' => 'feb', 'мар' => 'march',
-      'апр' => 'apr', 'май' => 'may', 'мая' => 'may',
-      'июн' => 'jun', 'июл' => 'jul', 'авг' => 'aug',
-      'сен' => 'sep', 'окт' => 'oct', 'нояб' => 'nov',
-      'дек' => 'dec'
-    }
+    # getting class variables from 'data' folder contents
+    Dir.chdir(File.join(File.dirname(__FILE__), '..', 'data'))
+    Dir.glob('*.yml') do |yml|
+      class_variable_set "@@#{yml.gsub('.yml', '')}".to_sym, YAML::load(File.read(yml))
+    end
 
     # TODO: string to utf8 if Ruby version > 1.9
     # TODO: convert to lowercase with Unicode gem
