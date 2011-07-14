@@ -20,8 +20,9 @@ module Day
       class_variable_set "@@#{yml.gsub('.yml', '')}".to_sym, YAML::load(File.read(yml))
     end
 
-    # TODO: string to utf8 if Ruby version > 1.9
-    # TODO: convert to lowercase with Unicode gem
+    # TODO: - string to utf8 if Ruby version > 1.9
+    #       - convert to lowercase with Unicode gem
+    #       - set date
     def initialize string
       @string = string.strip
       @now = Time.now
@@ -242,10 +243,10 @@ def Day::Ru string
   Day::Ru.new(string).parse
 end
 
-    #  1.05.2011
-    #  01.05.2011
-    #  1-5-2011
-    #  2011-5-1
-    #  2011.5.1
-    #  2011.1 (!!!)
-p Day::Ru 'через 2 месяца'
+# 1.05.2011
+# 01.05.2011
+# 1-5-2011
+# 2011-5-1
+# 2011.5.1
+# 2011.1 (!!!)
+#p Day::Ru 'через 2 месяца'

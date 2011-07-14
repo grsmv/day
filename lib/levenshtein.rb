@@ -71,13 +71,13 @@ class Levenshtein
     end
 end
 
-#@needle = 'послзвтр'
+@needle = 'сиводня'
 
-#@haystack = %w( завтра сегодня вчера позавчера послезавтра январь февраль март апрель май июнь июль август сентябрь октябрь ноябрь декабрь апр)
+@haystack = %w( завтра сегодня вчера позавчера послезавтра январь февраль март апрель май июнь июль август сентябрь октябрь ноябрь декабрь апр)
 
-#words = {}
-#for word in @haystack
-  #words[Levenshtein.distance(@needle, word).to_i] = word
-#end
+words = {}
+for word in @haystack
+  words[Levenshtein.distance(@needle, word).to_i] = word
+end
 
-#puts "Closest to #{@needle} word is #{words.sort.flatten[1]}"
+puts "Closest to #{@needle} word is #{words.sort.flatten[1]}"

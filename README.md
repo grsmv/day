@@ -74,3 +74,13 @@ TODO:
 3. Write YARD documentation
 4. Pack as gem
 5. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
+   (and look at the http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+6. Set start date + Timezone
+
+
+USAGE:
+-----
+    puts Day::Ru 'через 2 месяца'  #=> Wed Sep 14 00:00:00 +0300 2011
+    puts Day::Ru 'завтра'          #=> Wed Jul 15 00:00:00 +0300 2011
+
+    # (For other examples see table at the top)
