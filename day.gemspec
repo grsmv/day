@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors           = ["Sergey Gerasimov"]
   s.email             = ["mail@grsmv.com"]
   s.homepage          = "http://github.com/grsmv/day"
-  s.summary           = "Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages."
+  s.summary           = "Gem for date parsing"
   s.description       = "Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages."
   s.rubyforge_project = s.name
   s.files             = [
