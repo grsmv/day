@@ -15,8 +15,7 @@ module Day
   class Ru
 
     # getting class variables from 'data' folder contents
-    Dir.chdir(File.join(File.dirname(__FILE__), '..', 'data'))
-    Dir.glob('*.yml') do |yml|
+    Dir.glob('../data/*.yml') do |yml|
       class_variable_set "@@#{yml.gsub('.yml', '')}".to_sym, YAML::load(File.read(yml))
     end
 
