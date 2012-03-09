@@ -15,10 +15,12 @@ module Day
   class Ru
 
     # getting class variables from 'data' folder contents
+    prev_dir = Dir.pwd
     Dir.chdir(File.join(File.dirname(__FILE__), '..', 'data'))
     Dir.glob('*.yml') do |yml|
       class_variable_set "@@#{yml.gsub('.yml', '')}".to_sym, YAML::load(File.read(yml))
     end
+    Dir.chdir prev_dir
 
     # TODO: - string to utf8 if Ruby version > 1.9
     #       - convert to lowercase with Unicode gem
