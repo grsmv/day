@@ -39,9 +39,9 @@ Table of possible phrase types to parse:
     неделю назад                 |                                 |       +
     две недели назад             |                                 |       +
     2 недели назад               |                                 |       +
-    на следующей неделе               |                                 |       +
-    на след.(?) неделе               |                                 |       +
-    на прошлой неделе               |                                 |       +
+    на следующей неделе          |                                 |
+    на след.(?) неделе           |                                 |
+    на прошлой неделе            |                                 |
     ----------------------------------------------------------------------------------
     через месяц                  |                                 |       +
     через два месяца             |                                 |       +
@@ -72,13 +72,11 @@ Table of possible phrase types to parse:
 TODO:
 -----
 
-1. Move Unicode gem (unicode-0.4.0) in dependencies
-2. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
-3. Write YARD documentation
-4. Pack as gem
-5. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
+1. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
+2. Write YARD documentation
+3. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
    (and look at the http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
-6. Set start date + Timezone
+4. Set start date + Timezone
 
 
 USAGE:
