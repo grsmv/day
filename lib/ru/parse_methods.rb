@@ -1,7 +1,9 @@
+# coding: ASCII-8BIT
+
 module Day
 
   class Ru
-    
+
     private
 
     def yesterday_today_tomorrow
