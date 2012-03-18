@@ -13,8 +13,9 @@ Gem::Specification.new do |s|
   s.description = "Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages."
   s.rubyforge_project = s.name
 
-  s.add_runtime_dependency "unicode", "~> 0.4.2" if RUBY_VERSION < "1.9"
-  s.add_runtime_dependency "unicode_utils", "~> 1.3.0" if RUBY_VERSION > "1.9"
+  # TODO: test this approach (common dependencies)
+  s.add_runtime_dependency "unicode", "~> 0.4.2" # if RUBY_VERSION < "1.9"
+  s.add_runtime_dependency "unicode_utils", "~> 1.3.0" # if RUBY_VERSION > "1.9"
   
   s.files = [
     'README.md', 
