@@ -35,7 +35,6 @@ module Day
 
     private
 
-
     def yesterday_today_tomorrow
       @date = case @string
         when /^(позавчера)$/ then @now - 2.days
@@ -244,11 +243,3 @@ end
 def Day::Ru string
   Day::Ru.new(string).parse
 end
-
-# 1.05.2011
-# 01.05.2011
-# 1-5-2011
-# 2011-5-1
-# 2011.5.1
-# 2011.1 (!!!)
-#p Day::Ru 'через 2 месяца'
