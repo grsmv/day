@@ -1,10 +1,15 @@
 # coding: utf-8
-# $KCODE = 'u'
 
-$LOAD_PATH << '.'
+if RUBY_VERSION < "1.9"
+  $KCODE = 'u'
+  require 'rubygems' # DEVELOPMENT
+  require 'unicode'  # DEVELOPMENT
+else
+  $LOAD_PATH << '.'
+  require 'unicode_utils' # DEVELOPMENT
+end
 
 require 'date'
-require 'iconv'
 require 'yaml'
 require 'ru/parse'
 require 'ru/parse_methods'
@@ -24,6 +29,11 @@ class String
     (defined?(Encoding) && self.respond_to?(:force_encoding)) ? 
       self.force_encoding('ASCII-8BIT') : self
   end
+
+  def to_downcase
+    (RUBY_VERSION < "1.9") ? 
+      ::Unicode::downcase(self) : ::UnicodeUtils.downcase(self)
+  end
 end
 
 module Day
@@ -37,11 +47,8 @@ module Day
       )
     end
 
-    # TODO: - string to utf8 if Ruby version > 1.9
-    #       - convert to lowercase with Unicode gem
-    #       - set date
     def initialize string
-      @string = string.strip.encode!
+      @string = string.strip.to_downcase.encode!
       @now = Time.now
       @week_start = @now - @now.wday.days
     end
@@ -55,4 +62,4 @@ def Day::Ru string
   Day::Ru.new(string).parse
 end
 
-p Day::Ru('во вторник')
+p Day::Ru('ЗаВтРа')
