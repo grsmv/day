@@ -1,3 +1,4 @@
+# coding: utf-8
 $KCODE = 'u'
 
 require 'date'
@@ -19,7 +20,7 @@ module Day
     # getting class variables from 'data' folder contents
     Dir.glob('../data/*.yml') do |yml|
       class_variable_set(
-        "@@#{yml.gsub('.yml', '')}".to_sym, YAML::load(File.read(yml))
+        "@@#{yml.gsub(/(\.\.\/data\/|\.yml)/, '')}".to_sym, YAML::load(File.read(yml))
       )
     end
 
@@ -40,3 +41,5 @@ end
 def Day::Ru string
   Day::Ru.new(string).parse
 end
+
+# p Day::Ru('во вторник')
