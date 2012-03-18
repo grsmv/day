@@ -2,11 +2,11 @@
 
 if RUBY_VERSION < "1.9"
   $KCODE = 'u'
-  # require 'rubygems' # DEVELOPMENT
-  # require 'unicode'  # DEVELOPMENT
+  require 'rubygems'
+  require 'unicode'
 else
   $LOAD_PATH << '.'
-  # require 'unicode_utils' # DEVELOPMENT
+  require 'unicode_utils'
 end
 
 require 'date'
