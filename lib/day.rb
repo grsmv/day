@@ -3,12 +3,11 @@
 if RUBY_VERSION < "1.9"
   $KCODE = 'u'
   require 'rubygems'
-  require 'unicode'
 else
   $LOAD_PATH << '.'
-  require 'unicode_utils'
 end
 
+require 'unicode'
 require 'date'
 require 'yaml'
 require 'ru/parse'
@@ -31,8 +30,7 @@ class String
   end
 
   def to_downcase
-    (RUBY_VERSION < "1.9") ? 
-      ::Unicode::downcase(self) : ::UnicodeUtils.downcase(self)
+    ::Unicode::downcase(self)
   end
 end
 
