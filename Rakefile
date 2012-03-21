@@ -1,12 +1,14 @@
+require 'rake/testtask'
+
 begin
   require "bundler"
+  require "bundler/gem_tasks"
   Bundler.setup
 rescue LoadError
   $stderr.puts "You need to have Bundler installed to be able build this gem."
 end
 
 gemspec = eval(File.read(Dir["*.gemspec"].first))
-
 
 desc "Validate the gemspec"
 task :gemspec do
