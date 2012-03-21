@@ -10,8 +10,8 @@ end
 require 'unicode'
 require 'date'
 require 'yaml'
-require 'ru/parse'
-require 'ru/parse_methods'
+require 'day/ru/parse'
+require 'day/ru/parse_methods'
 
 class Numeric
   def days
