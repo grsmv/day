@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
 
   s.name = "day"
-  s.version = "0.0.3"
-  s.date = %q{2012-03-20}
+  s.version = "0.0.5"
+  s.date = %q{2012-03-19}
   s.platform = Gem::Platform::RUBY
   s.authors = ["Serge Gerasimov"]
   s.email = ["mail@grsmv.com"]

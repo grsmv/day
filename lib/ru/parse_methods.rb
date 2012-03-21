@@ -1,7 +1,6 @@
 # coding: ASCII-8BIT
 
 module Day
-
   class Ru
 
     private
@@ -57,19 +56,19 @@ module Day
     end
 
     def next_month num
-      month_proto(num) { |month|
+      month_proto(num) do |month|
         @now.mon + month > 12 ?
           [(@now.year + (@now.mon + month) / 12), ((@now.mon + month) % 12)] : 
           [@now.year, (@now.mon + month)]
-      }
+      end
     end
 
     def previous_month num
-      month_proto(num) { |month|
+      month_proto(num) do |month|
         @now.mon - month < 1 ?
           [(@now.year - (@now.mon - month) / 12 * -1), (12 - ((month - @now.mon) % 12))] :
           [@now.year, (@now.mon - month)]
-      }
+      end
     end
   end
 end

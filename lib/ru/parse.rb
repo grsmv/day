@@ -1,7 +1,6 @@
 # coding: ASCII-8BIT
 
 module Day
-
   class Ru
 
     public
