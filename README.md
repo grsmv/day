@@ -12,11 +12,3 @@ USAGE:
     # also you can define date to start counting from:
     start_day = Time.mktime(2015, 8, 30)
     puts Day::Ru.new('в следующий вторник', start_day).parse
-
-TODO:
------
-
-1. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
-2. Write YARD documentation
-3. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
-   (and look at the http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
