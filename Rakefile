@@ -10,6 +10,13 @@ end
 
 gemspec = eval(File.read(Dir["*.gemspec"].first))
 
+Rake::TestTask.new do |t|
+  t.libs << "test"
+end
+
+desc "Run tasks"
+task :default => :test
+
 desc "Validate the gemspec"
 task :gemspec do
   gemspec.validate
