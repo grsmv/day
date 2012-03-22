@@ -1,4 +1,11 @@
-1. Write tests for sure in equality of numerical and literal days values and for sure in right date recognition
+1. Write tests 
+
 2. Write YARD documentation
-3. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
+
+3. Type error recognition ('черз' instead 'через') and fixing. 
+   (?!: vocabulary + Levenshtein distance).
    (and look at the http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+
+4. Use lexical string scanning (StringScanner from 'strscan' library)
+   More information: http://corelib.rubyonrails.org/classes/StringScanner.html
+   + Ruby Best Practices > Appendix B > Lexical Parsing with Regular Exprssions (strscan)
