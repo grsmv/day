@@ -11,7 +11,7 @@ USAGE:
 
     # also you can define date to start counting from:
     start_day = Time.mktime(2015, 8, 30)
-    puts Day::Ru.new('в следующий вторник', start_day)
+    puts Day::Ru.new('в следующий вторник', start_day).parse
 
 TODO:
 -----
