@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
     'lib/ru/parse.rb',
     'lib/ru/parse_methods.rb',
     
-    'data/month_vocabulary.yml',
-    'data/short_week_days.yml',
-    'data/simple_numerics.yml',
-    'data/week_days.yml'
+    'data/ru/month_vocabulary.yml',
+    'data/ru/short_week_days.yml',
+    'data/ru/simple_numerics.yml',
+    'data/ru/week_days.yml'
   ]
 end
