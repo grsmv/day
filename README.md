@@ -20,4 +20,3 @@ TODO:
 2. Write YARD documentation
 3. Type error recognition ('черз' instead 'через') and fixing. (?!: vocabulary + Levenshtein distance).
    (and look at the http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
-4. Перенести верхнюю таблицу в Wiki
