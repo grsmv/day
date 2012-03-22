@@ -1,3 +1,5 @@
+![Travis CI testing status](https://secure.travis-ci.org/grsmv/day.png?branch=master)
+
 Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages.
 
 Table of possible phrase types to parse:
