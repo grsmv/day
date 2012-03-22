@@ -13,8 +13,12 @@ module Day
           yesterday_today_tomorrow
 
         # через (1 день | 2 дня | 5 дней)
-        when /^через\s(\d{1,})\sд(н(|я|ей)|ень)$/i then
+        when /^через\s(\d{1,})?\sд(н(|я|ей)|ень)$/i then
           future_days $1
+
+        # через день (сокращенный вариант пред. метода)
+        when /^через\sдень$/i then
+          future_days 1
 
         # через (один день | два дня | пять дней)
         when /^через\s(#{@@simple_numerics.keys.join('|')})\sд(н(|я|ей)|ень)$/ then
