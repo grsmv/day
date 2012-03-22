@@ -1,8 +1,11 @@
 language: ruby
+
 gemfile: 
   - Gemfile
+
 before_install:
   - bundle install
+
 rvm:
   - 1.8.7
   - 1.9.2
