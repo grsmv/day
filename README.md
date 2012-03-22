@@ -1,4 +1,4 @@
-![Travis CI testing status](https://secure.travis-ci.org/grsmv/day.png?branch=master)
+[![Build Status](https://secure.travis-ci.org/grsmv/day.png?branch=master)](http://travis-ci.org/grsmv/day)
 
 Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages.
 
