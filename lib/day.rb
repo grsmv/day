@@ -38,20 +38,23 @@ module Day
 
   class Ru
 
+    attr_accessor :date
+
     # getting class variables from 'data' folder contents
     Dir.glob('../data/ru/*.yml') do |yml|
       class_variable_set(
-        "@@#{yml.gsub(/(\.\.\/data\/|\.yml)/, '')}".to_sym, YAML::load(File.read(yml))
+        "@@#{yml.gsub(/(\.\.\/data\/ru\/|\.yml)/, '')}".to_sym, YAML::load(File.read(yml))
       )
     end
 
-    def initialize string
-      @string = string.strip.to_downcase.encode!
-      @now = Time.now
+    # Initalizing new object
+    #
+    # @param [String] string natural language date designation
+    # @param [Time] now date to count from
+    def initialize(string, now = Time.now)
+      @string, @now = string.strip.to_downcase.encode!, now
       @week_start = @now - @now.wday.days
     end
-
-    attr_accessor :date
   end
 end
 
