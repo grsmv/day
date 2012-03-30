@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = ["mail@grsmv.com"]
   s.homepage = "http://github.com/grsmv/day"
   s.summary = "Gem for date parsing"
-  s.description = "Gem for date parsing (in the scale of the day, hours is not very important in my projects now). It support Russian and Ukrainian (in future) languages."
+  s.description = "Gem for date recognition and parsing in natural language phrases."
   s.rubyforge_project = s.name
 
   s.add_runtime_dependency "unicode", "~> 0.4.2"
