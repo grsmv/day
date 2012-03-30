@@ -14,20 +14,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project = s.name
 
   s.add_runtime_dependency "unicode", "~> 0.4.2"
-  
-  s.files = [
-    'README.md', 
-    'CHANGELOG.md', 
-    'LICENSE', 
 
-    'lib/day.rb', 
-    'lib/levenshtein.rb',
-    'lib/ru/parse.rb',
-    'lib/ru/parse_methods.rb',
-    
-    'data/ru/month_vocabulary.yml',
-    'data/ru/short_week_days.yml',
-    'data/ru/simple_numerics.yml',
-    'data/ru/week_days.yml'
-  ]
+  s.files  = `git ls-files`.split($\)
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.require_paths = ["lib"]
 end
