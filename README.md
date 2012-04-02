@@ -7,10 +7,10 @@ Gem for date recognition and parsing in natural language phrases. It supports Ru
 USAGE:
 -----
 ```ruby
-    puts Day::Ru 'через 2 месяца'  #=> Wed Sep 14 00:00:00 +0300 2011
-    puts Day::Ru 'завтра'          #=> Wed Jul 15 00:00:00 +0300 2011
+puts Day::Ru 'через 2 месяца'  #=> Wed Sep 14 00:00:00 +0300 2011
+puts Day::Ru 'завтра'          #=> Wed Jul 15 00:00:00 +0300 2011
 
-    # also you can define date to start counting from:
-    start_day = Time.mktime(2015, 8, 30)
-    puts Day::Ru.new('в следующий вторник', start_day).parse
+# also you can define date to start counting from:
+start_day = Time.mktime(2015, 8, 30)
+puts Day::Ru.new('в следующий вторник', start_day).parse
 ```
