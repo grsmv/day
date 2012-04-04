@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.files  = `git ls-files`.split($\).delete_if { |file| file =~ /^\.\w/ }
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
-  s.require_paths = ["lib"]
+  # s.require_paths = ["lib"]
 end

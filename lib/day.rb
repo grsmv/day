@@ -41,9 +41,9 @@ module Day
     attr_accessor :date
 
     # getting class variables from 'data' folder contents
-    Dir.glob('../data/ru/*.yml') do |yml|
+    Dir.glob('data/ru/*.yml') do |yml|
       class_variable_set(
-        "@@#{yml.gsub(/(\.\.\/data\/ru\/|\.yml)/, '')}".to_sym, YAML::load(File.read(yml))
+        "@@#{yml.gsub(/(data\/ru\/|\.yml)/, '')}".to_sym, YAML::load(File.read(yml))
       )
     end
 
