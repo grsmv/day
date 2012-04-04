@@ -79,23 +79,23 @@ class DayTest < Test::Unit::TestCase
   # previous_days
   # =============
   def test_011_1_day_ago
-    assert_equal parse('1 день назад'), Time.at(today - 1.days)
+    assert_equal parse('1 день назад'), (today - 1.days).to_time
   end 
 
   def test_012_2_days_ago
-    assert_equal parse('2 дня назад'), Time.at(today - 2.days)
+    assert_equal parse('2 дня назад'), (today - 2.days).to_time
   end 
 
   def test_013_5_days_ago
-    assert_equal parse('5 дней назад'), Time.at(today - 5.days)
+    assert_equal parse('5 дней назад'), (today - 5.days).to_time
   end 
 
   def test_014_two_days_ago
-    assert_equal parse('два дня назад'), Time.at(today - 2.days)
+    assert_equal parse('два дня назад'), (today - 2.days).to_time
   end 
 
   def test_015_five_days_ago
-    assert_equal parse('пять дней назад'), Time.at(today - 5.days)
+    assert_equal parse('пять дней назад'), (today - 5.days).to_time
   end 
 
 end
