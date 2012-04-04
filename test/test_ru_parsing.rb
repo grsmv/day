@@ -68,7 +68,7 @@ class DayTest < Test::Unit::TestCase
   end
 
   def test_009_since_10_days
-    assert_equal parse('через 10 дней'), Time.mktime(2012, 4, 1, 01, 00)
+    assert_equal parse('через 10 дней'), (today + 10.days).to_time
   end
 
   def test_010_since_one_day
@@ -80,6 +80,22 @@ class DayTest < Test::Unit::TestCase
   # =============
   def test_011_1_day_ago
     assert_equal parse('1 день назад'), Time.at(today - 1.days)
+  end 
+
+  def test_012_2_days_ago
+    assert_equal parse('2 дня назад'), Time.at(today - 2.days)
+  end 
+
+  def test_013_5_days_ago
+    assert_equal parse('5 дней назад'), Time.at(today - 5.days)
+  end 
+
+  def test_014_two_days_ago
+    assert_equal parse('два дня назад'), Time.at(today - 2.days)
+  end 
+
+  def test_015_five_days_ago
+    assert_equal parse('пять дней назад'), Time.at(today - 5.days)
   end 
 
 end
