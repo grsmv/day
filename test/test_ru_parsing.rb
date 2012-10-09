@@ -98,4 +98,7 @@ class DayTest < Test::Unit::TestCase
     assert_equal parse('пять дней назад'), (today - 5.days).to_time
   end 
 
+  def test_016_done_nothing
+    # assert_equal parse('пять дней назад'), (today - 5.days).to_time
+  end
 end
